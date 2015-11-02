@@ -95,4 +95,12 @@ function getUserUplineByUserId($uid){
 }
 
 
+function check_login_session(){
+  if(isset($_SESSION['login_id'])){
+    header('Location: page_error.php?error_id=0');
+    exit;
+  }
+}
+
+
 ?>
